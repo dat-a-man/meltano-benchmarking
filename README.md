@@ -1,5 +1,7 @@
 Melatano bench marking:
+
 This repo is created how for [self hosted benchmark article](https://dlthub.com/blog/self-hosted-tools-benchmarking). Meltano was benchmarked.
+
 Steps involved:
 
 1. Created a TPCH dataset that is around 6.42 GB on postgres.
