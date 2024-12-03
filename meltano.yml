@@ -12,7 +12,7 @@ environments:
           default_replication_method: FULL_TABLE
           filter_schemas:
           - pipeline_benchmark
-          host: 34.131.74.127
+          host: #set up host
           port: 5432
           user: postgres
       loaders:
