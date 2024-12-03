@@ -1,0 +1,36 @@
+version: 1
+default_environment: dev
+project_id: 54eaeca7-4623-4e85-8078-984e8b8f64df
+environments:
+- name: dev
+  config:
+    plugins:
+      extractors:
+      - name: tap-postgres
+        config:
+          database: postgres
+          default_replication_method: FULL_TABLE
+          filter_schemas:
+          - pipeline_benchmark
+          host: 34.131.74.127
+          port: 5432
+          user: postgres
+      loaders:
+      - name: target-bigquery
+        config:
+          batch_size: 15000
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-postgres.git
+  loaders:
+  - name: target-bigquery
+    variant: z3z1ma
+    pip_url: git+https://github.com/z3z1ma/target-bigquery.git
+    config:
+      credentials_json: # please set up the credentials
+      dataset: test_meltano3
+      project: dlthub-sandbox

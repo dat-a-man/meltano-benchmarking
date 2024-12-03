@@ -11,3 +11,7 @@ Steps involved:
    Memory: 16 GB RAM
    CPU Base Frequency: 2.3 GHz
 4. Created a meltano pipeline as in the repository. 
+
+
+
+Logs : [here](logs/elt/devtap-postgres-to-target-bigquery/98c0eb60-c79a-4670-a651-641bbc11c49c/elt.log)
